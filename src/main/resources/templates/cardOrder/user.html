@@ -94,17 +94,19 @@
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('job')} ? 'error'">
                                 <label>ご職業</label>
-                                <input type="radio" name="job" value="経営自営" th:checked="${form.job}=='経営自営'"/>経営・自営業
-                                <input type="radio" name="job" value="会社員" th:checked="${form.job}=='会社員'"/>会社員
-                                <input type="radio" name="job" value="契約派遣" th:checked="${form.job}=='契約派遣'"/>契約・派遣社員
-                                <input type="radio" name="job" value="公務員" th:checked="${form.job}=='公務員'"/>公務員
-                                <input type="radio" name="job" value="民間団体" th:checked="${form.job}=='民間団体'"/>民間団体
-                                <input type="radio" name="job" value="主婦" th:checked="${form.job}=='主婦'"/>主婦
-                                <input type="radio" name="job" value="学生" th:checked="${form.job}=='学生'"/>学生
-                                <input type="radio" name="job" value="年金受給" th:checked="${form.job}=='年金受給'"/>年金受給者の方
-                                <input type="radio" name="job" value="パートアルバイト" th:checked="${form.job}=='パートアルバイト'"/>パート・アルバイト
-                                <input type="radio" name="job" value="他有職" th:checked="${form.job}=='他有職'"/>その他 (有職）
-                                <input type="radio" name="job" value="他無職" th:checked="${form.job}=='他無職'"/>その他（無職）
+                                <select name="job">
+                                    <option value="経営自営">経営自営</option>
+                                    <option value="会社員">会社員</option>
+                                    <option value="契約派遣">派遣社員</option>
+                                    <option value="公務員">公務員</option>
+                                    <option value="民間団体">民間団体</option>
+                                    <option value="主婦">主婦</option>
+                                    <option value="学生">学生</option>
+                                    <option value="年金受給">年金受給</option>
+                                    <option value="パートアルバイト">パートアルバイト</option>
+                                    <option value="他有職">他有職</option>
+                                    <option value="他無職">他無職</option>
+                                </select>
                             </div>
 
                             <!--/*"お勤め先"の入力値を引き回すための隠し項目*/-->
