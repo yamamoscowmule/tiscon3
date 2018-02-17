@@ -84,7 +84,13 @@
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('employeeLength')} ? 'error'">
                                 <label>勤続年数</label>
-                                <input type="text" class="number" name="employeeLength" th:value="${form.employeeLength}"/><span class="unit">年</span >
+                                <select name="kibun">
+                                    <option value="saikou">1年未満</option>
+                                    <option value="botiboti">1年～3年</option>
+                                    <option value="hutuu">3年～5年</option>
+                                    <option value="saiaku">5年～10年未</option>
+                                    <option value="saiaku">10年～15年</option>
+                                    <option value="saiaku">15年以上</option>
                             </div>
 
                             <!--/*"ご本人"の入力値を引き回すための隠し項目*/-->
