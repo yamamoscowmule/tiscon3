@@ -86,7 +86,15 @@
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('debt')} ? 'error'">
                                 <label>ローン等のお借り入れ金額</label>
-                                <input type="text" class="number" name="debt" th:value="${form.debt}"/><span class="unit">万円</span>
+
+                            <select name="ローン">
+                                <option value="なし">なし</option>
+                                <option value="100万円未満">100万円未満</option>
+                                <option value="100万～300万円">100万～300万円</option>
+                                <option value="300万～500万円">300万～500万円</option>
+                                <option value="500万～1000万円">500万～1000万円</option>
+                                <option value="1000万円以上">1000万円以上</option>
+                            </select>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('income')} ? 'error'">
                                 <label>昨年の所得</label>

@@ -46,16 +46,18 @@
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('industryType')} ? 'error'">
                                 <label>業種</label>
-                                <input type="radio" name="industryType" value="農林水鉱" th:checked="${form.industryType}=='農林水鉱'"/>農業・林業・水産業・鉱業
-                                <input type="radio" name="industryType" value="建築不動産" th:checked="${form.industryType}=='建築不動産'"/>建設・不動産業
-                                <input type="radio" name="industryType" value="製造" th:checked="${form.industryType}=='製造'"/>製造業
-                                <input type="radio" name="industryType" value="卸小売流通" th:checked="${form.industryType}=='卸小売流通'"/>卸売業・小売・その他流通業
-                                <input type="radio" name="industryType" value="金融保険" th:checked="${form.industryType}=='金融保険'"/>金融・保険業
-                                <input type="radio" name="industryType" value="運輸通信" th:checked="${form.industryType}=='運輸通信'"/>運輸・通信業
-                                <input type="radio" name="industryType" value="電気ガス" th:checked="${form.industryType}=='電気ガス'"/>電気・ガス業
-                                <input type="radio" name="industryType" value="官公庁" th:checked="${form.industryType}=='官公庁'"/>官公庁
-                                <input type="radio" name="industryType" value="サービス" th:checked="${form.industryType}=='サービス'"/>その他サービス業
-                                <input type="radio" name="industryType" value="その他" th:checked="${form.industryType}=='その他'"/>その他・不明
+                                <select name="kibun">
+                                    <option value="nourinnsuikou">農林水鉱</option>
+                                    <option value="kennchikufudousann">建築不動産</option>
+                                    <option value="seizou">製造</option>
+                                    <option value="oroshiuriseizou">卸売製造</option>
+                                    <option value="kinnyuuhokenn">金融保険</option>
+                                    <option value="unnyutuushinn">運輸通信</option>
+                                    <option value="dennkigasu">電気ガス</option>
+                                    <option value="kannkucyou">官公庁</option>
+                                    <option value="sa-bisu">サービス</option>
+                                    <option value="sonota">その他</option>
+                                </select>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('capital')} ? 'error'">
                                 <label>資本金</label>
