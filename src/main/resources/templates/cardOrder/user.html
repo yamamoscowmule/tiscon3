@@ -28,15 +28,15 @@
                             <div align="right"><font color="red">*</font>必須項目</div>
                             <div class="field" th:classappend="${form.hasErrors('kanjiName')} ? 'error'">
                                 <label>お名前（漢字）<font color="red">*</font></label>
-                                <input type="text" class="seimei" name="kanjiName" th:value="${form.kanjiName}"/>
+                                <pre>     姓　 <input type="text" class="seimei" name="kanjiName" placeholder="(例)羽生" th:value="${form.kanjiName}"/>        名　 <input type="text" placeholder="結弦" class="seimei"/></pre>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('kanaName')} ? 'error'">
                                 <label>お名前（カナ）<font color="red">*</font></label>
-                                <input type="text" name="kanaName" th:value="${form.kanaName}"/>
+                                <pre>     セイ <input type="text" class="seimei" name="kanaName" placeholder="ハニュウ" th:value="${form.kanaName}"/>        メイ <input type="text" placeholder="ユズル" class="seimei"/></pre>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('alphabetName')} ? 'error'">
                                 <label>お名前（ローマ字）<font color="red">*</font></label>
-                                <input type="text" name="alphabetName" th:value="${form.alphabetName}"/>
+                                <pre>LastName <input type="text" class="seimei" name="alphabetName" placeholder="Hanyu" th:value="${form.alphabetName}"/>   FirstName <input type="text" placeholder="Yuzuru" class="seimei"/></pre>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('gender')} ? 'error'">
                                 <label>性別<font color="red">*</font></label>
@@ -45,23 +45,75 @@
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('dateOfBirth')} ? 'error'">
                                 <label>生年月日<font color="red">*</font></label>
-                                <input type="text" name="dateOfBirth" th:value="${form.dateOfBirth}"/>
+                                <pre> 西暦 <input type="text" class="number" name="dateOfBirth" th:value="${form.dateOfBirth}"/> 年   <input type="text" class="number"/> 月    <input type="text" class="number"/> 日</pre>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('zipCode')} ? 'error'">
                                 <label>郵便番号<font color="red">*</font></label>
-                                <input type="text" class="zipcode" name="zipCode" th:value="${form.zipCode}"/>
+                                <input type="text" class="number" name="zipCode" th:value="${form.zipCode}"/> ー <input type="text" class="number"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('address')} ? 'error'">
                                 <label>ご住所<font color="red">*</font></label>
+                                都道府県 <select class="number" name="pref_name">
+                                    <option value="" selected>都道府県</option>
+                                    <option value="北海道">北海道</option>
+                                    <option value="青森県">青森県</option>
+                                    <option value="岩手県">岩手県</option>
+                                    <option value="宮城県">宮城県</option>
+                                    <option value="秋田県">秋田県</option>
+                                    <option value="山形県">山形県</option>
+                                    <option value="福島県">福島県</option>
+                                    <option value="茨城県">茨城県</option>
+                                    <option value="栃木県">栃木県</option>
+                                    <option value="群馬県">群馬県</option>
+                                    <option value="埼玉県">埼玉県</option>
+                                    <option value="千葉県">千葉県</option>
+                                    <option value="東京都">東京都</option>
+                                    <option value="神奈川県">神奈川県</option>
+                                    <option value="新潟県">新潟県</option>
+                                    <option value="富山県">富山県</option>
+                                    <option value="石川県">石川県</option>
+                                    <option value="福井県">福井県</option>
+                                    <option value="山梨県">山梨県</option>
+                                    <option value="長野県">長野県</option>
+                                    <option value="岐阜県">岐阜県</option>
+                                    <option value="静岡県">静岡県</option>
+                                    <option value="愛知県">愛知県</option>
+                                    <option value="三重県">三重県</option>
+                                    <option value="滋賀県">滋賀県</option>
+                                    <option value="京都府">京都府</option>
+                                    <option value="大阪府">大阪府</option>
+                                    <option value="兵庫県">兵庫県</option>
+                                    <option value="奈良県">奈良県</option>
+                                    <option value="和歌山県">和歌山県</option>
+                                    <option value="鳥取県">鳥取県</option>
+                                    <option value="島根県">島根県</option>
+                                    <option value="岡山県">岡山県</option>
+                                    <option value="広島県">広島県</option>
+                                    <option value="山口県">山口県</option>
+                                    <option value="徳島県">徳島県</option>
+                                    <option value="香川県">香川県</option>
+                                    <option value="愛媛県">愛媛県</option>
+                                    <option value="高知県">高知県</option>
+                                    <option value="福岡県">福岡県</option>
+                                    <option value="佐賀県">佐賀県</option>
+                                    <option value="長崎県">長崎県</option>
+                                    <option value="熊本県">熊本県</option>
+                                    <option value="大分県">大分県</option>
+                                    <option value="宮崎県">宮崎県</option>
+                                    <option value="鹿児島県">鹿児島県</option>
+                                    <option value="沖縄県">沖縄県</option>
+                                </select>
+                                <br>
+                                それ以降の住所
                                 <input type="text" name="address" th:value="${form.address}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('homePhoneNumber')} ? 'error'">
                                 <label>自宅電話番号<font color="red">*</font></label>
-                                <input type="text" name="homePhoneNumber" th:value="${form.homePhoneNumber}"/>
+                                <input type="text" class="number" name="homePhoneNumber" th:value="${form.homePhoneNumber}"/> ー <input type="text" class="number"/> ー <input type="text" class="number"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('mobilePhoneNumber')} ? 'error'">
                                 <label>携帯電話番号</label>
-                                <input type="text" name="mobilePhoneNumber" th:value="${form.mobilePhoneNumber}"/>
+                                <input type="text" class="number" name="mobilePhoneNumber" th:value="${form.mobilePhoneNumber}"/> ー <input type="text" class="number"/> ー <input type="text" class="number"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('emailAddress')} ? 'error'">
                                 <label>メールアドレス<font color="red">*</font></label>
@@ -74,7 +126,7 @@
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('houseClassification')} ? 'error'">
                                 <label>お住まい<font color="red">*</font></label>
-                                <select name="kibun">
+                                <select name="kibun" class="seimei">
                                     <option value="">選択してください</option>
                                     <option value="saikou">本人名義の一戸建・マンション</option>
                                     <option value="botiboti">家族名義の一戸建・マンション</option>
@@ -90,7 +142,7 @@
                             <div class="field" th:classappend="${form.hasErrors('debt')} ? 'error'">
                                 <label>ローン等のお借り入れ金額<font color="red">*</font></label>
 
-                            <select name="ローン">
+                            <select name="ローン" class="seimei">
                                 <option value="">選択してください</option>
                                 <option value="なし">なし</option>
                                 <option value="100万円未満">100万円未満</option>
@@ -102,7 +154,7 @@
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('income')} ? 'error'">
                                 <label>昨年の所得<font color="red">*</font></label>
-                                <select name="kibun">
+                                <select name="kibun" class="seimei">
                                     <option value="">選択してください</option>
                                     <option value="saikou">0円～100万円</option>
                                     <option value="botiboti">100万円～500万円 </option>
@@ -112,7 +164,7 @@
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('job')} ? 'error'">
                                 <label>ご職業<font color="red">*</font></label>
-                                <select name="job">
+                                <select name="job" class="seimei">
                                     <option value="">選択してください</option>
                                     <option value="経営自営">経営自営</option>
                                     <option value="会社員">会社員</option>
