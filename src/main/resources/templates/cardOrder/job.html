@@ -29,23 +29,26 @@
 
                             <div class="field" th:classappend="${form.hasErrors('employerName')} ? 'error'">
                                 <label>お勤め先名</label>
-                                <input type="text" name="employerName" th:value="${form.employerName}"/>
+                                <input type="text" placeholder="TIS株式会社" name="employerName" th:value="${form.employerName}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('employerZipCode')} ? 'error'">
                                 <label>お勤め先郵便番号</label>
-                                <input type="text" name="employerZipCode" th:value="${form.employerZipCode}"/>
+                                <input type="text"placeholder="160" class="seimei" name="employerZipCode1" th:value="${form.employerZipCode1}"/>＿
+                                <input type="text"class="seimei" placeholder="0023" name="employerZipCode2" th:value="${form.employerZipCode2}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('employerAddress')} ? 'error'">
                                 <label>お勤め先住所</label>
-                                <input type="text" name="employerAddress" th:value="${form.employerAddress}"/>
+                                <input type="text" placeholder="東京都新宿区西新宿8-17-1" name="employerAddress" th:value="${form.employerAddress}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('employerPhoneNumber')} ? 'error'">
                                 <label>お勤め先電話番号</label>
-                                <input type="text" name="employerPhoneNumber" th:value="${form.employerPhoneNumber}"/>
+                                <input type="text" placeholder="078" class="seimei"name="employerPhoneNumber1" th:value="${form.employerPhoneNumber1}"/>＿
+                                <input type="text" placeholder="999" class="seimei"name="employerPhoneNumber2" th:value="${form.employerPhoneNumber2}"/>＿
+                                <input type="text"placeholder="9999" class="seimei"name="employerPhoneNumber3" th:value="${form.employerPhoneNumber3}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('industryType')} ? 'error'">
                                 <label>業種</label>
-                                <select name="industryType">
+                                <select name="industryType"class="seimei">
                                     <option value="">選択してください</option>
                                     <option value="nourinnsuikou">農林水鉱</option>
                                     <option value="kennchikufudousann">建築不動産</option>
@@ -61,7 +64,7 @@
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('capital')} ? 'error'">
                                 <label>資本金</label>
-                                <select name="capital">
+                                <select name="capital"class="seimei">
                                     <option value="">選択してください</option>
                                     <option value="999" th:field="${form.capital}" th:checked="${form.capital}=='999'">１千万円未満</option>
                                     <option value="4999" th:field="${form.capital}" th:checked="${form.capital}=='4999'">１千万円以上５千万円未満</option>
@@ -72,7 +75,7 @@
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('companySize')} ? 'error'">
                                 <label>お勤め先の規模（従業員数）</label>
-                                <select name="companySize">
+                                <select name="companySize"class="seimei">
                                     <option value="">選択してください</option>
                                     <option value="9" th:field="${form.companySize}" th:checked="${form.companySize}=='9'">10名未満</option>
                                     <option value="29" th:field="${form.companySize}" th:checked="${form.companySize}=='29'">10名以上30名未満</option>
@@ -84,15 +87,15 @@
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('department')} ? 'error'">
                                 <label>所属部署</label>
-                                <input type="text" name="department" th:value="${form.department}"/>
+                                <input type="text" placeholder="営業部" name="department" th:value="${form.department}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('position')} ? 'error'">
                                 <label>役職</label>
-                                <input type="text" name="position" th:value="${form.position}"/>
+                                <input type="text" placeholder="係長" name="position" th:value="${form.position}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('employeeLength')} ? 'error'">
                                 <label>勤続年数</label>
-                                <select name="employeeLength">
+                                <select name="employeeLength"class="seimei">
                                     <option value="">選択してください</option>
                                     <option value="saikou">1年未満</option>
                                     <option value="botiboti">1年～3年</option>
