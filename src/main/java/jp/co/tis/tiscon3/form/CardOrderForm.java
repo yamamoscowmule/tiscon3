@@ -64,8 +64,7 @@ public class CardOrderForm extends FormBase {
     private String houseClassification;
 
     @NotBlank
-    @Size(max = 6)
-    @Pattern(regexp = "[0-9]*")
+    @Size(max = 120)
     private String debt;
 
     @NotBlank
@@ -73,8 +72,7 @@ public class CardOrderForm extends FormBase {
     private String job;
 
     @NotBlank
-    @Size(max = 6)
-    @Pattern(regexp = "[0-9]*")
+    @Size(max = 120)
     private String income;
 
     @Size(max = 255)

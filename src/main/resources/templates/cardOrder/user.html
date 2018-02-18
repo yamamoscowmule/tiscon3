@@ -28,7 +28,7 @@
                             <div align="right"><font color="red">*</font>必須項目</div>
                             <div class="field" th:classappend="${form.hasErrors('kanjiName')} ? 'error'">
                                 <label>お名前（漢字）<font color="red">*</font></label>
-                                <pre>     姓　 <input type="text" class="seimei" name="kanjiName" placeholder="(例)羽生" th:value="${form.kanjiName}"/>        名　 <input type="text" placeholder="結弦" class="seimei"/></pre>
+                                <pre>     姓　 <input type="text" class="seimei" name="kanjiName" placeholder="(例)羽生" th:value="${form.kanjiName}"/>        名　 <input type="text"  placeholder="結弦" class="seimei" /></pre>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('kanaName')} ? 'error'">
                                 <label>お名前（カナ）<font color="red">*</font></label>
@@ -45,7 +45,8 @@
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('dateOfBirth')} ? 'error'">
                                 <label>生年月日<font color="red">*</font></label>
-                                <pre> 西暦 <input type="text" class="number" name="dateOfBirth" th:value="${form.dateOfBirth}"/> 年   <input type="text" class="number"/> 月    <input type="text" class="number"/> 日</pre>
+                                <pre> 西暦 <input type="text" class="number" name="dateOfBirth" th:value="${form.dateOfBirth}"/> 年
+                                    <input type="text" class="number"/> 月    <input type="text" class="number"/> 日</pre>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('zipCode')} ? 'error'">
                                 <label>郵便番号<font color="red">*</font></label>
@@ -126,23 +127,23 @@
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('houseClassification')} ? 'error'">
                                 <label>お住まい<font color="red">*</font></label>
-                                <select name="kibun" class="seimei">
+                                <select name="houseClassification" class="seimei" th:value="${form.houseClassification}">
                                     <option value="">選択してください</option>
-                                    <option value="saikou">本人名義の一戸建・マンション</option>
-                                    <option value="botiboti">家族名義の一戸建・マンション</option>
-                                    <option value="hutuu">社宅</option>
-                                    <option value="saiaku">公営住宅</option>
-                                    <option value="saiaku">賃貸マンション</option>
-                                    <option value="saiaku">借家</option>
-                                    <option value="saiaku">アパート</option>
-                                    <option value="saiaku">寮・下宿</option>
-                                    <option value="saiaku">その他</option>
+                                    <option value="本人名義の一戸建・マンション">本人名義の一戸建・マンション</option>
+                                    <option value="家族名義の一戸建・マンション">家族名義の一戸建・マンション</option>
+                                    <option value="社宅">社宅</option>
+                                    <option value="公営住宅">公営住宅</option>
+                                    <option value="賃貸マンション">賃貸マンション</option>
+                                    <option value="借家">借家</option>
+                                    <option value="アパート">アパート</option>
+                                    <option value="寮・下宿">寮・下宿</option>
+                                    <option value="その他">その他</option>
                                 </select>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('debt')} ? 'error'">
                                 <label>ローン等のお借り入れ金額<font color="red">*</font></label>
 
-                            <select name="ローン" class="seimei">
+                            <select name="debt" class="seimei" value="${form.debt}">
                                 <option value="">選択してください</option>
                                 <option value="なし">なし</option>
                                 <option value="100万円未満">100万円未満</option>
@@ -154,17 +155,17 @@
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('income')} ? 'error'">
                                 <label>昨年の所得<font color="red">*</font></label>
-                                <select name="kibun" class="seimei">
+                                <select name="income" class="seimei" th:value="${form.income}">
                                     <option value="">選択してください</option>
-                                    <option value="saikou">0円～100万円</option>
-                                    <option value="botiboti">100万円～500万円 </option>
-                                    <option value="hutuu">500万円～1000万円</option>
-                                    <option value="saiaku">1000万円以上</option>
+                                    <option value="0円～100万円">0円～100万円</option>
+                                    <option value="100万円～500万円">100万円～500万円 </option>
+                                    <option value="500万円～1000万円">500万円～1000万円</option>
+                                    <option value="1000万円以上">1000万円以上</option>
                                 </select>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('job')} ? 'error'">
                                 <label>ご職業<font color="red">*</font></label>
-                                <select name="job" class="seimei">
+                                <select name="job" class="seimei" th:value="${form.job}">
                                     <option value="">選択してください</option>
                                     <option value="経営自営">経営自営</option>
                                     <option value="会社員">会社員</option>
