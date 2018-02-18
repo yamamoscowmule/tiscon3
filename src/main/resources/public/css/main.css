@@ -69,11 +69,17 @@ ul.label {
 
 .photo-show {
     height: 300px;
-    margin: auto;
+    margin-left:10px;
     max-width: 100%;
     position: relative;
     width: 440px;
 }
+text-show{
+ height: 300px;
+     margin-right:10px;
+     max-width: 100%;
+     position: relative;
+     width: 440px;}
 
 .photo-show img {
     animation: show 9s infinite;
