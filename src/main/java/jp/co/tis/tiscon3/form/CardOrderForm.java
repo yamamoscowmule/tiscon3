@@ -112,4 +112,20 @@ public class CardOrderForm extends FormBase {
     @Pattern(regexp = "[0-9]*")
     private String employeeLength;
 
+    @NotBlank
+    @Size(max = 4)
+    @Pattern(regexp = "\\d{4} *$")
+    private String dateOfBirthyear;
+
+    @NotBlank
+    @Size(max = 2)
+    @Pattern(regexp = "\\d{1,2} *$")
+    private String dateOfBirthmonth;
+
+    @NotBlank
+    @Size(max = 2)
+    @Pattern(regexp = "\\d{1,2} *$")
+    private String dateOfBirthday;
+
+
 }
