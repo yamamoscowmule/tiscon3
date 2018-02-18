@@ -28,7 +28,7 @@
                             <div align="right"><font color="red">*</font>必須項目</div>
                             <div class="field" th:classappend="${form.hasErrors('kanjiName')} ? 'error'">
                                 <label>お名前（漢字）<font color="red">*</font></label>
-                                <input type="text" name="kanjiName" th:value="${form.kanjiName}"/>
+                                <input type="text" class="seimei" name="kanjiName" th:value="${form.kanjiName}"/>
                             </div>
                             <div class="field" th:classappend="${form.hasErrors('kanaName')} ? 'error'">
                                 <label>お名前（カナ）<font color="red">*</font></label>

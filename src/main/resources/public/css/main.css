@@ -49,6 +49,10 @@ ul.label {
     text-align: left;
 }
 
+.seimei{
+ width: 150px !important;
+}
+
 .number {
     text-align: right;
     vertical-align: middle !important;
